@@ -34,16 +34,16 @@ app.get("/users", (req, res) => {
   });
 });
 
-app.post("/users", (req, res) => {
-  const user = req.body;
-  User.create(user, (err, data) => {
-    if (err) {
-      res.status(500).send(err);
-    } else {
-      res.status(201).send(data);
-    }
-  });
-});
+// app.post("/users", (req, res) => {
+//   const user = req.body;
+//   User.create(user, (err, data) => {
+//     if (err) {
+//       res.status(500).send(err);
+//     } else {
+//       res.status(201).send(data);
+//     }
+//   });
+// });
 
 app.delete("/users/:id", (req, res) => {
   const { id } = req.params;
